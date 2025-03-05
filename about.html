@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us </title>
+    <link rel="icon" href="loder.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #333;
+            padding: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 90%;
+            max-width: 900px;
+            animation: fadeIn 2s ease-in-out;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff3366;
+            margin-bottom: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        p {
+            font-size: 1.2em;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .reviews {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .review {
+            background: #ffe0e6;
+            border-radius: 15px;
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .review:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+        }
+        .review h3 {
+            font-size: 1.5em;
+            color: #ff3366;
+            margin-bottom: 10px;
+        }
+        .review p {
+            color: #777;
+            font-size: 1em;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 0.9em;
+            color: #fff;
+            background: #ff3366;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to the Virtual Classroom! In the digital age, online learning has transformed education, offering endless possibilities for students worldwide. Our platform provides a modern solution where students can attend classes from the comfort of their own homes, anytime and anywhere.</p>
+        <p>The Virtual Classroom System overcomes the limitations of traditional classroom settings, providing seamless interaction between students and instructors. This system eliminates the need for physical presence, making learning more flexible, accessible, and personalized.</p>
+        <p>Students have the freedom to choose their instructors and classes according to their preferences. All sessions are conducted online, allowing students to learn at their own pace. Additionally, students can provide feedback and reviews to enhance the learning experience and ensure quality education.</p>
+    </div>
+
+    <div class="container">
+        <h1>Student Reviews</h1>
+        <p>Here’s what our students have to say about their experience in our Virtual Classroom:</p>
+        <div class="reviews">
+            <div class="review">
+                <h3>Sathwik</h3>
+                <p>"This platform has made learning so much more interactive and flexible. Highly recommend it!"</p>
+            </div>
+            <div class="review">
+                <h3>Harsha</h3>
+                <p>"The online classes are amazing, and I love how I can attend from the comfort of my home."</p>
+            </div>
+            <div class="review">
+                <h3>Praneeth</h3>
+                <p>"Great experience! The platform is easy to use and has everything I need for my studies."</p>
+            </div>
+            <div class="review">
+                <h3>Umesh</h3>
+                <p>"The teachers are very supportive, and the entire system is well-organized. A fantastic learning experience!"</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Virtual Classroom System. All Rights Reserved.
+    </footer>
+</body>
+</html>
