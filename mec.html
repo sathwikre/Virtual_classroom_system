@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Classroom</title>
+    <link rel="icon" href="loder.png">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+          
+        }
+
+     
+        nav {
+            background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+            background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: block;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #f1e7e7;
+            min-width: 200px;
+            z-index: 1000;
+            
+        }
+
+        nav ul li:hover ul {
+            display: block;
+            
+        }
+
+        nav ul li ul li {
+            width: 100%;
+        }
+
+        nav ul li ul li a {
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            display: block;
+            color: rgb(227, 62, 230);
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #faf4f4;
+            color: rgb(95, 215, 236);
+        }
+
+        .menu-logo {
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .main-content {
+            background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+            background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+            color: white;
+            height: calc(100vh - 60px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding-top: 60px; 
+        }
+
+        .main-content h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .main-content p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .main-content .btn {
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .main-content .btn:hover {
+            background-color: #efebeb;
+            color: black;
+        }
+
+        /* Vision and Mission Section */
+        .vision-mission {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .vision-mission h2 {
+            font-size: 30px;
+            color: #333;
+        }
+
+        .vision-mission ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .vision-mission li {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+        }
+        nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transform: scale(1.1); /* Scaling effect */
+}@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    animation: fadeIn 1.5s ease-in;
+}
+nav {
+    transform: translateY(-100%);
+    animation: slideDown 1s ease-out forwards;
+}.main-content h1 {
+    animation: zoomIn 1.5s ease-in-out;
+}.vision-mission {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeUp 1.5s ease-in-out forwards 1s;
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="mainindexteacher.html">
+                    <img src="home1.png" alt="Logo" class="menu-logo"> Home
+                </a>
+            </li>
+            <li>
+                <a href="#">First Year</a>
+                <ul>
+                    <li><a href="live.html" target="_blank">Live Class</a></li>
+                    <li><a href="firstvieup.html">Upoload Recorded Classes</a></li>
+                    <li><a href="firstmatup.html">Upload Materials</a></li>
+                    <li><a href="index.php">Send Mail To Students</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Second Year</a>
+                <ul>
+                    <li><a href="live.html" target="_blank">Live Class</a></li>
+                    <li><a href="secondvieup.html">Upoload Recorded Classes</a></li>
+                    <li><a href="secondmatup.html">Upload Materials</a></li>
+                    <li><a href="index.php">Send Mail To Students</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Third Year</a>
+                <ul>
+                    <li><a href="live.html" target="_blank">Live Class</a></li>
+                    <li><a href="secondvieup.html">Upoload Recorded Classes</a></li>
+                    <li><a href="secondmatup.html">Upload Materials</a></li>
+                    <li><a href="index.php">Send Mail To Students</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Fourth Year</a>
+                <ul>
+                    <li><a href="live.html" target="_blank">Live Class</a></li>
+                    <li><a href="secondvieup.html">Upoload Recorded Classes</a></li>
+                    <li><a href="secondmatup.html">Upload Materials</a></li>
+                    <li><a href="index.php">Send Mail To Students</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+  
+    <div class="main-content">
+        <h1>INTRODUCTION PAGE</h1>
+        <p>Mechanical Engineering</p>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+
+
+    <div class="vision-mission">
+        <h2>Vision of the Department</h2>
+        <ul>
+            <li>"Produce globally competitive, innovative mechanical engineers with core values."</li>
+        </ul>
+
+        <h2>Mission of the Department</h2>
+        <ul>
+            <li>Design curricula to meet global requirements and challenges.</li>
+            <li>Promote innovative practices at all levels.</li>
+            <li>Imbibe core values.</li>
+            <li>Develop faculty and staff members to meet the challenges.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

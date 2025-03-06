@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Class Room</title>
+    <link rel="icon" href="loder.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 800px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            transition: box-shadow 0.3s, transform 0.2s;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            transform: scale(1.05);
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        button:active {
+            transform: scale(1.1);
+        }
+        #jitsi-container {
+            margin-top: 20px;
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .show {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Live Class Room</h1>
+        <input type="text" id="room-name" placeholder="Enter Room Name or Roll Number" />
+        <br>
+        <button onclick="startClass()">Start Class</button>
+        <div id="jitsi-container"></div>
+    </div>
+
+    <script src="https://meet.jit.si/external_api.js"></script>
+    <script>
+        function startClass() {
+            var roomName = document.getElementById("room-name").value;
+            if (roomName.trim() === "") {
+                alert("Please enter a room name.");
+                return;
+            }
+            var domain = "meet.jit.si";
+            var options = {
+                roomName: roomName,
+                width: "100%",
+                height: 500,
+                parentNode: document.getElementById("jitsi-container"),
+                configOverwrite: {},
+                interfaceConfigOverwrite: {
+                    filmStripOnly: false,
+                    SHOW_JITSI_WATERMARK: false
+                }
+            };
+            new JitsiMeetExternalAPI(domain, options);
+            
+         
+            document.getElementById("jitsi-container").classList.add("show");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Classroom</title>
+    <link rel="icon" href="loder.png">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #f0f0f0;
+            overflow-x: hidden;
+        }
+
+        .background-container {
+            background-image: url('h1_hero.png');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 20px;
+            animation: zoomIn 5s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(1.1);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .text-overlay {
+            color: white;
+            font-size: 45px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            opacity: 0;
+            animation: fadeInUp 2s ease-in-out forwards;
+        }
+
+        .text-overlay div {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            background: linear-gradient(to right, #666EFF, #666EFF);
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 15px 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+          
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: rgba(243, 250, 253, 0.959);
+            min-width: 150px;
+            border-radius: 5px;
+            top: 100%;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul li:hover ul {
+            display: block;
+            animation: slideDown 0.5s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav ul li ul li a {
+            color: rgb(64, 183, 212);
+            padding: 10px 15px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        nav ul li ul li a:hover {
+            color: #f52fd8;
+            transform: translateX(10px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #666EFF;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" style="font-size: large;">Login</a>
+                <ul>
+                    <li><a href="login.php" class="login-link" data-target="login.php">Student</a></li>
+                    <li><a href="logint.php" class="login-link" data-target="logint.php">Teacher</a></li>
+                    <li><a href="loginadmin.php" class="login-link" data-target="loginadmin.php">Admin</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" style="font-size: large;">Sign up</a>
+                <ul>
+                    <li><a href="#" class="signup-link" data-target="signup.php">Student</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+        <div class="background-container">
+            <div class="text-overlay">
+                Welcome to <br>  
+
+                Virtual Classroom <br>
+
+                <div style="font-size: 20px;">
+                    Attend video lectures, skim through study materials, and <br>ask doubts at one place.
+                </div>
+            </div>
+        </div>
+    
+    
+       
+    
+    <div class="footer">
+        &copy; 2025 Virtual Classroom. All Rights Reserved.
+    </div>
+    
+    <script>
+        document.querySelectorAll('.login-link').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = link.getAttribute('data-target');
+            });
+        });
+        
+        
+        document.querySelectorAll('.signup-link').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = link.getAttribute('data-target');
+            });
+        });
+        
+    </script>
+</body>
+</html>

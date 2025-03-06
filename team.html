@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team</title>
+    <link rel="icon" href="teami.jpg">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #f9d5d3, #f6b1b1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            width: 90%;
+            max-width: 700px;
+            animation: fadeIn 2s ease;
+            box-sizing: border-box;
+            color: #1b1015;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #e80060;
+            animation: bounce 2s infinite;
+        }
+        p {
+            color: #555;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .team {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            transition: transform 0.5s;
+        }
+        .team:hover {
+            transform: scale(1.02);
+        }
+        .member {
+            background: #fff;
+            border-radius: 15px;
+            padding: 15px;
+            width: 100%;
+            max-width: 200px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            box-sizing: border-box;
+            animation: fadeIn 1.5s ease;
+        }
+        .member:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .member img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #339fde;
+        }
+        .member h3 {
+            color: #1b1015;
+            margin: 10px 0 5px;
+        }
+        .member p {
+            color: #777;
+            font-size: 0.9em;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 0.9em;
+            color: #fff;
+            background: #1b1015;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Team</h1>
+        <p>We are a dedicated team passionate about delivering the best educational experience. Our mission is to empower students with knowledge and inspire them to achieve their dreams.</p>
+        
+        <div class="team">
+            <div class="member">
+                <img src="chenna.png" alt="Team Member 1">
+                <h3>Prof. Chenna Reddy</h3>
+                <p>Principal</p>
+            </div>
+            <div class="member">
+                <img src="Bharati.jpeg" alt="Team Member 2">
+                <h3>Prof. Bharati</h3>
+                <p>HOD</p>
+            </div>
+            <div class="member">
+                <img src="eswarreddy.jpg" alt="Team Member 3">
+                <h3>Prof. Eswar Reddy</h3>
+                <p>Teaches Every Subject</p>
+            </div>
+            <div class="member">
+                <img src="keshava.jpg" alt="Team Member 4">
+                <h3>Prof. Keshava Reddy</h3>
+                <p>Maths</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Virtual Classroom System. All Rights Reserved.
+    </footer>
+</body>
+</html>
